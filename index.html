@@ -3,9 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Enkara Tech — Website development, mobile apps, digital marketing, digital solutions, SEO, cybersecurity and AI.">
+<meta name="description" content="Enkara Tech helps businesses, startups and institutions turn ideas into useful digital products — from websites and apps to AI-powered systems.">
 <meta name="theme-color" content="#0b1324">
-<title>Enkara Tech | Innovation Without Limits</title>
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Enkara Tech | Technology built around real people">
+<meta property="og:description" content="Websites, apps, automation, AI and digital growth — designed around your actual business.">
+<title>Enkara Tech | Technology built around real people.</title>
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -296,10 +299,318 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
   .footer-grid{grid-template-columns:1fr}.bottom{display:block}.bottom div{margin-top:6px}
   .form-grid{grid-template-columns:1fr}.form-field.full{grid-column:auto}
 }
+
+/* =========================================================
+   ENKARA TECH — HUMAN / REAL-WORLD ENHANCEMENT LAYER
+   ========================================================= */
+:root{
+  --radius-lg:16px;
+  --radius-md:11px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+body{
+  background:#f8f5ee;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9999;
+  opacity:.028;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+.nav{
+  transition:box-shadow .3s var(--ease), background .3s var(--ease);
+}
+.nav.scrolled{
+  box-shadow:0 10px 30px rgba(11,19,36,.08);
+}
+.nav-links a,
+.btn,
+.service,
+.project,
+.process-card,
+.review,
+.stat{
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
+}
+.hero{
+  min-height:720px;
+  position:relative;
+}
+.hero-grid{
+  min-height:642px;
+}
+.hero-copy{
+  max-width:690px;
+}
+.hero h1{
+  max-width:700px;
+  font-weight:800;
+}
+.hero-copy>p{
+  font-size:15px;
+  line-height:1.85;
+  max-width:610px;
+}
+.hero .eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+}
+.hero .eyebrow::before{
+  content:"";
+  width:26px;
+  height:2px;
+  background:var(--red);
+}
+.hero-art{
+  border-radius:0 0 0 22px;
+}
+.hero-art::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(90deg,#f8f5ee 0%,rgba(248,245,238,.65) 10%,transparent 35%);
+  pointer-events:none;
+}
+.experience{
+  border:1px solid rgba(11,19,36,.08);
+  border-radius:12px;
+}
+.experience::before{
+  content:"";
+  display:block;
+  width:8px;height:8px;
+  border-radius:50%;
+  background:var(--green);
+  position:absolute;
+  top:17px;right:17px;
+}
+.section{
+  padding:94px 0;
+}
+.section-head{
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.section-head h2{
+  letter-spacing:-1.2px;
+}
+.section-head p{
+  font-size:13px;
+  line-height:1.8;
+  max-width:620px;
+  margin:0 auto;
+}
+.service{
+  min-height:265px;
+  border-radius:14px;
+  padding:25px 21px;
+  box-shadow:0 2px 0 rgba(11,19,36,.02);
+}
+.service:hover{
+  transform:translateY(-8px);
+}
+.service-icon{
+  width:48px;height:48px;
+  border-radius:12px;
+  background:#fff5f5;
+  border:1px solid #f2d7d9;
+}
+.why{
+  position:relative;
+  overflow:hidden;
+}
+.why::after{
+  content:"";
+  position:absolute;
+  width:420px;height:420px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+  right:-180px;top:-180px;
+}
+.stat{
+  background:rgba(255,255,255,.025);
+}
+.stat:hover{
+  transform:translateY(-5px);
+  border-color:rgba(255,255,255,.34);
+}
+.about-photo{
+  border-radius:16px;
+  box-shadow:0 25px 70px rgba(11,19,36,.14);
+}
+.portfolio{
+  position:relative;
+  overflow:hidden;
+}
+.project{
+  border-radius:12px;
+}
+.project-img{
+  height:180px;
+}
+.project-body{
+  padding:16px;
+}
+.project h3{
+  font-size:13px;
+}
+.project p{
+  font-size:10px;
+  line-height:1.7;
+  margin-top:4px;
+}
+.process-card{
+  border-radius:14px;
+  min-height:190px;
+}
+.process-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+.process-number{
+  box-shadow:0 0 0 7px #fff1f1;
+}
+.review{
+  border-radius:14px;
+  min-height:205px;
+}
+.review:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+.cta{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  padding:62px 24px;
+  box-shadow:0 25px 70px rgba(11,19,36,.16);
+}
+.cta::before{
+  content:"";
+  position:absolute;
+  width:260px;height:260px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:50%;
+  left:-100px;bottom:-150px;
+}
+.cta h2,.cta p,.cta .btn{
+  position:relative;
+  z-index:1;
+}
+.modal-box{
+  border-radius:18px;
+}
+.form-field input,.form-field textarea,.form-field select{
+  border-radius:9px;
+  transition:border-color .2s, box-shadow .2s;
+}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{
+  box-shadow:0 0 0 4px rgba(230,57,70,.09);
+}
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,20px);
+  background:#0b1324;
+  color:#fff;
+  padding:12px 17px;
+  border-radius:10px;
+  font-size:11px;
+  font-weight:600;
+  box-shadow:0 15px 45px rgba(0,0,0,.2);
+  opacity:0;
+  pointer-events:none;
+  z-index:4000;
+  transition:.3s var(--ease);
+}
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+.scroll-progress{
+  position:fixed;
+  top:0;left:0;
+  height:3px;
+  width:0;
+  background:var(--red);
+  z-index:3000;
+}
+.floating-contact{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:1500;
+  width:50px;height:50px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#0b1324;
+  color:#fff;
+  box-shadow:0 12px 30px rgba(11,19,36,.24);
+  font-size:19px;
+  transition:.25s var(--ease);
+}
+.floating-contact:hover{
+  transform:translateY(-4px) scale(1.04);
+  background:var(--red);
+}
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .65s var(--ease),transform .65s var(--ease);
+}
+.reveal.visible{
+  opacity:1;
+  transform:none;
+}
+@media(max-width:620px){
+  .hero{min-height:auto}
+  .hero-grid{min-height:auto}
+  .hero-art{border-radius:0;height:330px}
+  .section{padding:70px 0}
+  .section-head h2{font-size:31px}
+  .floating-contact{right:16px;bottom:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+  .reveal{opacity:1;transform:none}
+}
+
+
+.human-note{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:16px;
+  color:#68758a;
+  font-size:10px;
+  font-weight:500;
+}
+.human-note span{color:#2eaa72;font-size:8px}
+
 </style>
 </head>
 
 <body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<a class="floating-contact" href="https://wa.me/?text=Hi%20Enkara%20Tech%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Message Enkara Tech on WhatsApp">↗</a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 
 <header class="nav">
   <div class="container nav-inner">
@@ -325,8 +636,8 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
 <section class="hero" id="home">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <div class="eyebrow">Innovation Without Limits</div>
-      <h1>Building Digital<br>Solutions That<br><span>Drive Growth</span></h1>
+      <div class="eyebrow">Technology built around real people.</div>
+      <h1>We build digital products<br>people actually <span>want to use.</span></h1>
       <p>We help businesses transform ideas into powerful digital products. From modern websites and mobile apps to AI solutions and digital marketing — we build, secure and scale.</p>
       <div class="actions">
         <a class="btn btn-red" href="#services">Explore Services →</a>
@@ -340,7 +651,7 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
         <b>5+</b>
         <small>Years of Experience</small>
       </div>
-      <div class="client-strip">
+      <div class="client-strip" aria-label="Industries we work with">
         <span>◈ Enkara Technologies</span><span>✣ Enkara Technologies</span>
     </div>
   </div>
@@ -355,14 +666,14 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
     </div>
 
     <div class="service-grid">
-      <article class="service"><div class="service-icon">▣</div><h3>Website Development</h3><p>Fast, responsive and modern websites that represent your brand and convert visitors into customers.</p><a class="learn service-open" href="#" data-service="Website Development">Learn More →</a></article>
-      <article class="service"><div class="service-icon">▯</div><h3>Mobile App Development</h3><p>Native and cross-platform mobile apps for iOS and Android with smooth performance.</p><a class="learn service-open" href="#" data-service="Mobile App Development">Learn More →</a></article>
-      <article class="service"><div class="service-icon">♢</div><h3>Digital Marketing</h3><p>Result-driven digital marketing strategies to grow brand awareness, leads and sales.</p><a class="learn service-open" href="#" data-service="Digital Marketing">Learn More →</a></article>
-      <article class="service"><div class="service-icon">◎</div><h3>Digital Solutions</h3><p>Custom digital solutions to automate processes and help your business grow smarter.</p><a class="learn service-open" href="#" data-service="Digital Solutions">Learn More →</a></article>
-      <article class="service"><div class="service-icon">↗</div><h3>SEO Optimization</h3><p>On-page, off-page and technical SEO to rank higher and generate organic traffic.</p><a class="learn service-open" href="#" data-service="SEO Optimization">Learn More →</a></article>
-      <article class="service"><div class="service-icon">♢</div><h3>Cyber Security</h3><p>Protect your data, systems and users with security reviews, hardening and best practices.</p><a class="learn service-open" href="#" data-service="Cyber Security">Learn More →</a></article>
-      <article class="service"><div class="service-icon">AI</div><h3>AI & Machine Learning</h3><p>Intelligent automation and AI-powered solutions for smarter operations and decisions.</p><a class="learn service-open" href="#" data-service="AI & Machine Learning">Learn More →</a></article>
-      <article class="service"><div class="service-icon">⚙</div><h3>Custom Software</h3><p>Robust software solutions built around your unique business requirements.</p><a class="learn service-open" href="#" data-service="Custom Software">Learn More →</a></article>
+      <article class="service"><div class="service-icon">▣</div><h3>Website Development</h3><p>Fast, accessible websites that make your business look credible and make it easy for people to take the next step.</p><a class="learn service-open" href="#" data-service="Website Development">Learn More →</a></article>
+      <article class="service"><div class="service-icon">▯</div><h3>Mobile App Development</h3><p>Useful Android and iOS experiences built around how your customers actually use your product.</p><a class="learn service-open" href="#" data-service="Mobile App Development">Learn More →</a></article>
+      <article class="service"><div class="service-icon">♢</div><h3>Digital Marketing</h3><p>Content and campaigns focused on conversations, leads and measurable growth — not vanity numbers.</p><a class="learn service-open" href="#" data-service="Digital Marketing">Learn More →</a></article>
+      <article class="service"><div class="service-icon">◎</div><h3>Digital Solutions</h3><p>Replace repetitive work with simple tools, dashboards and workflows your team can understand.</p><a class="learn service-open" href="#" data-service="Digital Solutions">Learn More →</a></article>
+      <article class="service"><div class="service-icon">↗</div><h3>SEO Optimization</h3><p>Technical and content improvements that help the right people discover your business organically.</p><a class="learn service-open" href="#" data-service="SEO Optimization">Learn More →</a></article>
+      <article class="service"><div class="service-icon">♢</div><h3>Cyber Security</h3><p>Practical security reviews and safeguards that reduce risk without making your systems painful to use.</p><a class="learn service-open" href="#" data-service="Cyber Security">Learn More →</a></article>
+      <article class="service"><div class="service-icon">AI</div><h3>AI & Machine Learning</h3><p>AI features that solve a real problem — from intelligent search and automation to assistants and analysis.</p><a class="learn service-open" href="#" data-service="AI & Machine Learning">Learn More →</a></article>
+      <article class="service"><div class="service-icon">⚙</div><h3>Custom Software</h3><p>Purpose-built software for the workflows that off-the-shelf tools never quite get right.</p><a class="learn service-open" href="#" data-service="Custom Software">Learn More →</a></article>
     </div>
   </div>
 </section>
@@ -371,7 +682,7 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
   <div class="container why-grid">
     <div class="why-copy">
       <div class="kicker">Why Choose Us</div>
-      <h2>Your Success,<br>Our Mission</h2>
+      <h2>We care about the outcome,<br>not just the deliverable.</h2>
       <p>We combine creativity, technology and strategy to deliver solutions that make a real impact for businesses and organizations.</p>
       <div class="why-list">
         <div>Experienced & Skilled Team</div>
@@ -394,7 +705,7 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
   <div class="container about-grid">
     <div class="about-copy">
       <div class="kicker">About Us</div>
-      <h2>We Are Enkara Tech</h2>
+      <h2>A small team with a big-builder mindset.</h2>
       <p>Enkara Tech is a technology company focused on building innovative digital solutions. We work with startups, SMEs and enterprises to turn ideas into reliable products using modern technology and practical development processes.</p>
       <div class="why-list" style="color:var(--text)">
         <div>Experienced team of developers and designers</div>
@@ -471,7 +782,7 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
   <div class="container">
     <div class="section-head">
       <div class="kicker">Technologies We Use</div>
-      <h2>Modern Technology Stack</h2>
+      <h2>Technology that fits the job</h2>
       <p>Tools selected for performance, maintainability and scalable products.</p>
     </div>
     <div class="tech-row">
@@ -494,7 +805,7 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
   <div class="container">
     <div class="section-head">
       <div class="kicker">Our Process</div>
-      <h2>From Idea To Impact</h2>
+      <h2>A simple process. A human conversation.</h2>
       <p>A clear process keeps projects focused, transparent and on track.</p>
     </div>
     <div class="process-grid">
@@ -510,7 +821,7 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
   <div class="container">
     <div class="section-head">
       <div class="kicker">Testimonials</div>
-      <h2>What Our Clients Say</h2>
+      <h2>Built for people, not just portfolios.</h2>
     </div>
     <div class="review-grid">
       <article class="review"><div class="stars">★★★★★</div><p>“Enkara Tech delivered a high-quality web application that exceeded our expectations. Their team was professional and responsive.”</p><div class="person"><div class="avatar">RA</div><div><strong>Ramesh Adhikari</strong><span>CEO, Tech Solutions</span></div></div></article>
@@ -521,7 +832,7 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
 </section>
 
 <div class="cta" id="contact">
-  <h2>Ready to Start Your Project?</h2>
+  <h2>Have an idea? Let’s make it real.</h2>
   <p>Tell us about your idea and we’ll turn it into a powerful digital solution.</p>
   <button class="btn btn-red open-contact">Get In Touch →</button>
 </div>
@@ -597,7 +908,7 @@ footer{background:var(--dark);color:#fff;padding:52px 0 18px}
 <div class="modal" id="contactModal" aria-hidden="true">
   <div class="modal-box">
     <button class="modal-close" id="modalClose" aria-label="Close">×</button>
-    <h2>Start Your Project</h2>
+    <h2>Tell Us Your Idea</h2>
     <p>Tell us what you need and our team can get back to you.</p>
     <form id="contactForm">
       <div class="form-grid">
@@ -703,6 +1014,63 @@ document.getElementById("subscribeBtn").addEventListener("click", () => {
   alert("Thank you for subscribing!");
   document.getElementById("newsletterEmail").value = "";
 });
+
+/* Human UX enhancements */
+const nav = document.querySelector(".nav");
+const progress = document.getElementById("scrollProgress");
+const toast = document.getElementById("toast");
+
+function showToast(message){
+  if(!toast) return;
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(window.__toastTimer);
+  window.__toastTimer = setTimeout(() => toast.classList.remove("show"), 3200);
+}
+
+window.addEventListener("scroll", () => {
+  if(nav) nav.classList.toggle("scrolled", window.scrollY > 12);
+  if(progress){
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + "%";
+  }
+}, {passive:true});
+
+/* Reveal content as it enters the viewport. */
+const revealTargets = document.querySelectorAll(
+  ".section-head,.service,.why-copy,.stat,.about-copy,.about-photo,.project,.process-card,.review,.cta"
+);
+revealTargets.forEach(el => el.classList.add("reveal"));
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
+revealTargets.forEach(el => revealObserver.observe(el));
+
+/* Give the contact form a friendly confirmation before opening mail. */
+const contactForm = document.getElementById("contactForm");
+if(contactForm){
+  contactForm.addEventListener("submit", () => {
+    showToast("Thanks — your project details are ready to send.");
+  }, {capture:true});
+}
+
+/* Newsletter: replace browser alert with a softer interaction. */
+const subscribeBtn = document.getElementById("subscribeBtn");
+if(subscribeBtn){
+  subscribeBtn.addEventListener("click", () => {
+    const email = document.getElementById("newsletterEmail")?.value.trim();
+    if(email && email.includes("@")){
+      showToast("You're on the list. Thanks for staying connected!");
+    }
+  }, {capture:true});
+}
+
 </script>
 </body>
 </html>
